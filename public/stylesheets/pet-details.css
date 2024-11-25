@@ -1,0 +1,18 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.navbar{
+    position: fixed;
+}
+.navbar .navbar-nav .nav-item a{
+    padding: 15px;
+    
+    
+}
+.navbar .navbar-nav .nav-but {
+    padding: 10px;
+}
+.foot{
+    background-color: rgb(76, 207, 230);
+}

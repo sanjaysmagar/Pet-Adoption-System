@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add pet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    {{>navbarShelter}}
+    <div class="sanjay" style="margin: 50px 0 50px 0;">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                <div class="card" style="border-radius: 15px; width: 550px; left: 130px;">
+                    <div class="card-body" style="background-color: rgb(132, 221, 221); width: 40rem;">
+                        <h3>Donate Pet</h3>
+                        <h6>Please fill in this form to add the pet for adoption</h6>
+
+                        <form action="/addpet" method="post" enctype="multipart/form-data">
+
+                            <div class="form-outline mb-2" style="padding-top: 1rem;">
+                                <label class="form-label" for="form3Example1cg">
+                                    <h5>Pet Name</h5>
+                                </label>
+                                <input type="text" name="petname" id="form3Example1cg" class="form-control form-control-lg"
+                                    placeholder="Enter pet name" />
+                            </div>
+
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="form3Example3cg">
+                                    <h5>Date of Birth</h5>
+                                </label>
+                                <input type="date" name="birthdate" id="form3Example3cg" class="form-control form-control-lg"
+                                    placeholder="Enter pet age" />
+
+                            </div>
+
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="form3Example4cg">
+                                    <h5>Category</h5>
+                                </label>
+                                <input type="text" name="category" id="form3Example4cg" class="form-control form-control-lg"
+                                    placeholder="Enter category" />
+
+                            </div>
+                            <div class="row row-cols-2 row-cols-md-4 g-2 py-3">
+                                <div>
+                                    <h5>Vacinated</h5>
+                                <input class="form-check-input" type="radio" name="vaccinated" value="true" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                             <h6>Yes</h6>
+                            </label> <br>
+                          
+                            <input class="form-check-input" type="radio" name="vaccinated" value="false" id="flexRadioDefault2">
+                            <label class="form-check-label" for="flexRadioDefault2">
+                              <h6>No</h6>
+                            </label>
+                                </div>
+                                <div>
+                                    <h5>Trained</h5>
+                                <input class="form-check-input" type="radio" name="trained" value="true" id="formcheck">
+                            <label class="form-check-label" for="check">
+                             <h6>Yes</h6>
+                            </label> <br>
+                          
+                            <input class="form-check-input" type="radio" name="trained" value="false" id="formcheck1">
+                            <label class="form-check-label" for="check1">
+                              <h6>No</h6>
+                            </label>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="form-outline mb-4" style="padding-top: 1rem;">
+                                <label class="form-label" for="form3Example4cg">
+                                    <h5>Color</h5>
+                                </label>
+                                <input type="text" name="color" id="form3Example4cg" class="form-control form-control-lg"
+                                    placeholder="Enter Color" />
+
+                            </div>
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="form3Example4cg">
+                                    <h5>Breed</h5>
+                                </label>
+                                <input type="text" name="breed" id="form3Example4cg" class="form-control form-control-lg"
+                                    placeholder="Enter breed" />
+
+                            </div>
+
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="form3Example4cdg">
+                                    <h5>Location</h5>
+                                </label>
+                                <input type="text" name="location" id="form3Example4cdg" class="form-control form-control-lg"
+                                    placeholder="Enter location" />
+
+                            </div>
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="form3Example4cdg">
+                                    <h5>Description</h5>
+                                </label>
+                                <input type="text" name="description" id="form3Example4cdg" class="form-control form-control-lg"
+                                    style="height: 5rem;" placeholder="Write something interesting about your pet" />
+
+                            </div>
+                            <div class="mb-3">
+                                <input type="file" name="upload" class="form-control" aria-label="file example" required>
+                                <div class="invalid-feedback">Example invalid form file feedback</div>
+                            </div>
+                            <button type="submit" class="btn btn bg-info" style="width: 15rem;" >Add</button>
+                            <button type="reset" class="btn btn bg-primary-subtle" style="width: 15rem;" >Cancel</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{>footer}}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+</html>

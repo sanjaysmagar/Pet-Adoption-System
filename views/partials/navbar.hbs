@@ -1,0 +1,79 @@
+<style>
+
+  .navbar .navbar-nav .nav-item a{
+    padding: 15px;
+    
+    
+  }
+  .navbar .navbar-nav .nav-but {
+    padding: 10px;
+  }
+
+</style>
+
+<nav class="navbar navbar-expand-lg bg-info">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">PetAdoption</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/dog">Dogs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/cat">Cats</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/others">Others</a>
+          </li>
+          <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Breed
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/breed/dog">Dog</a></li>
+              <li><a class="dropdown-item" href="/breed/cat">Cat</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Other</a></li>
+            </ul>
+          </li>
+          {{#if loggedIn}}
+          <li class="nav-item ">
+            <a class="nav-link active" aria-current="page" href="/requested">Requested</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link active" aria-current="page" href="/adopted">Adopted</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link active" aria-current="page" href="/profile">Profile</a>
+          </li>
+          {{/if}}
+          <li class="nav-item">
+            <a class="nav-link active" href="/aboutus">About Us</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          {{#if loggedIn}}
+          <li class="nav-but" >
+              <a class="btn btn btn-primary" href="/logmeout">Logout</a>
+          </li>
+          {{else}}
+            <li class="nav-but">
+              <a class="btn btn btn-primary" href="/login">Login</a>
+            </li>
+            <li class="nav-but">
+            <a class="btn btn btn-primary" href="/signup">SignUp</a>
+            </li>
+          {{/if}}
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+

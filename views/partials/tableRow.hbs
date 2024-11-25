@@ -1,0 +1,206 @@
+
+{{#each petss}}
+<tr>
+                        <td>{{ petname }}</td>
+                        <td>{{ age }} years</td>
+                        <td>{{ category }}</td>
+                        <td>{{#if vaccinated}}Yes{{else}}No{{/if}}</td>
+                        <td>{{#if trained}}Yes{{else}}No{{/if}}</td>
+                        <td>{{ color }}</td>
+                        <td>{{ breed }}</td>
+                        <td>{{ location }}</td>
+                        <td>{{ description }}</td>
+                        <td> <img src="/backend/images/{{ imageName }}" alt="" width="100"></td>
+
+                        <td>
+                           <a class="btn btn-primary" href="/edit-pet/{{ this._id }}">Edit</a>                     
+                           <form style="display: inline;" action="/delete/{{ this._id }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this item?');">
+                        {{!-- <input type="hidden" name="_method" value="DELETE"> --}}
+                              <button style="cursor: pointer;" type="submit" class="btn btn-danger ml-2">Delete</button>
+                           </form>
+                        </td>
+   </tr>
+{{/each}}
+
+
+{{#each kukur}}
+<tr>
+                        <td>{{ petname }}</td>
+                        <td>{{ age }} years</td>
+                        <td>{{ category }}</td>
+                        <td>{{#if vaccinated}}Yes{{else}}No{{/if}}</td>
+                        <td>{{#if trained}}Yes{{else}}No{{/if}}</td>
+                        <td>{{ color }}</td>
+                        <td>{{ breed }}</td>
+                        <td>{{ location }}</td>
+                        <td>{{ description }}</td>
+                        <td> <img src="/backend/images/{{ imageName }}" alt="" width="100"></td>
+
+                        <td>
+                           <a class="btn btn-primary" href="/edit-pet/{{ this._id }}">Edit</a>                     
+                           <form style="display: inline;" action="/delete/{{ this._id }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this item?');">
+                        {{!-- <input type="hidden" name="_method" value="DELETE"> --}}
+                              <button style="cursor: pointer;" type="submit" class="btn btn-danger ml-2">Delete</button>
+                           </form>
+                        </td>
+   </tr>
+{{/each}}
+
+{{#each biralo}}
+<tr>
+                        <td>{{ petname }}</td>
+                        <td>{{ age }} years</td>
+                        <td>{{ category }}</td>
+                        <td>{{#if vaccinated}}Yes{{else}}No{{/if}}</td>
+                        <td>{{#if trained}}Yes{{else}}No{{/if}}</td>
+                        <td>{{ color }}</td>
+                        <td>{{ breed }}</td>
+                        <td>{{ location }}</td>
+                        <td>{{ description }}</td>
+                        <td> <img src="/backend/images/{{ imageName }}" alt="" width="100"></td>
+
+                        <td>
+                           <a class="btn btn-primary" href="/edit-pet/{{ this._id }}">Edit</a>                     
+                           <form style="display: inline;" action="/delete/{{ this._id }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this item?');">
+                        {{!-- <input type="hidden" name="_method" value="DELETE"> --}}
+                              <button style="cursor: pointer;" type="submit" class="btn btn-danger ml-2">Delete</button>
+                           </form>
+                        </td>
+   </tr>
+{{/each}}
+
+{{#each aru}}
+<tr>
+                        <td>{{ petname }}</td>
+                        <td>{{ age }} years</td>
+                        <td>{{ category }}</td>
+                        <td>{{#if vaccinated}}Yes{{else}}No{{/if}}</td>
+                        <td>{{#if trained}}Yes{{else}}No{{/if}}</td>
+                        <td>{{ color }}</td>
+                        <td>{{ breed }}</td>
+                        <td>{{ location }}</td>
+                        <td>{{ description }}</td>
+                        <td> <img src="/backend/images/{{ imageName }}" alt="" width="100"></td>
+
+                        <td>
+                           <a class="btn btn-primary" href="/edit-pet/{{ this._id }}">Edit</a>                     
+                           <form style="display: inline;" action="/delete/{{ this._id }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this item?');">
+                        {{!-- <input type="hidden" name="_method" value="DELETE"> --}}
+                              <button style="cursor: pointer;" type="submit" class="btn btn-danger ml-2">Delete</button>
+                           </form>
+                        </td>
+   </tr>
+{{/each}}
+
+
+{{#each adopted}}
+<tr>
+                        <td>{{ petName }}</td>
+                        <td>{{ age }} years</td>
+                        <td>{{ category }}</td>
+                        <td>{{#if vaccinated}}Yes{{else}}No{{/if}}</td>
+                        <td>{{#if trained}}Yes{{else}}No{{/if}}</td>
+                        <td>{{ color }}</td>
+                        <td>{{ breed }}</td>
+                        <td>{{ location }}</td>
+                        <td>{{ description }}</td>
+                        <td> <img src="/backend/images/{{ imageName }}" alt="" width="100"></td>
+                        <td>{{firstName}} {{lastName}}</td>
+                        <td>{{email}}
+                        <td>{{mobileNo}}</td>
+                        </td>
+
+   </tr>
+{{/each}}
+
+{{#each kukurharu}}
+<tr>
+                        <td>{{ petname }}</td>
+                        <td>{{ age }} years</td>
+                        <td>{{ category }}</td>
+                        <td>{{#if vaccinated}}Yes{{else}}No{{/if}}</td>
+                        <td>{{#if trained}}Yes{{else}}No{{/if}}</td>
+                        <td>{{ color }}</td>
+                        <td>{{ breed }}</td>
+                        <td>{{ location }} <br><br> latitude: {{latitude}} <br> longitude: {{longitude}}</td>
+                        <td>{{ description }}</td>
+                        <td> <img src="/backend/images/{{ imageName }}" alt="" width="100"></td>
+
+                        <td>
+                           {{!-- <a class="btn btn-primary" href="/edit-pet/{{ this._id }}">Edit</a>                      --}}
+                           <form style="display: inline;" action="/deletegar/{{ this._id }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this item?');">
+                        {{!-- <input type="hidden" name="_method" value="DELETE"> --}}
+                              <button style="cursor: pointer;" type="submit" class="btn btn-danger ml-2">Delete</button>
+                           </form>
+                        </td>
+   </tr>
+{{/each}}
+
+{{#each admindog}}
+<tr>
+                        <td>{{ petname }}</td>
+                        <td>{{ age }} years</td>
+                        <td>{{ category }}</td>
+                        <td>{{#if vaccinated}}Yes{{else}}No{{/if}}</td>
+                        <td>{{#if trained}}Yes{{else}}No{{/if}}</td>
+                        <td>{{ color }}</td>
+                        <td>{{ breed }}</td>
+                        <td>{{ location }} <br><br> latitude: {{latitude}} <br> longitude: {{longitude}}</td>
+                        <td>{{ description }}</td>
+                        <td> <img src="/backend/images/{{ imageName }}" alt="" width="100"></td>
+
+                        <td>
+                           {{!-- <a class="btn btn-primary" href="/edit-pet/{{ this._id }}">Edit</a>                      --}}
+                           <form style="display: inline;" action="/deletegar/{{ this._id }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this item?');">
+                        {{!-- <input type="hidden" name="_method" value="DELETE"> --}}
+                              <button style="cursor: pointer;" type="submit" class="btn btn-danger ml-2">Delete</button>
+                           </form>
+                        </td>
+   </tr>
+{{/each}}
+
+{{#each admincat}}
+<tr>
+                        <td>{{ petname }}</td>
+                        <td>{{ age }} years</td>
+                        <td>{{ category }}</td>
+                        <td>{{#if vaccinated}}Yes{{else}}No{{/if}}</td>
+                        <td>{{#if trained}}Yes{{else}}No{{/if}}</td>
+                        <td>{{ color }}</td>
+                        <td>{{ breed }}</td>
+                        <td>{{ location }} <br><br> latitude: {{latitude}} <br> longitude: {{longitude}}</td>
+                        <td>{{ description }}</td>
+                        <td> <img src="/backend/images/{{ imageName }}" alt="" width="100"></td>
+
+                        <td>
+                           {{!-- <a class="btn btn-primary" href="/edit-pet/{{ this._id }}">Edit</a>                      --}}
+                           <form style="display: inline;" action="/deletegar/{{ this._id }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this item?');">
+                        {{!-- <input type="hidden" name="_method" value="DELETE"> --}}
+                              <button style="cursor: pointer;" type="submit" class="btn btn-danger ml-2">Delete</button>
+                           </form>
+                        </td>
+   </tr>
+{{/each}}
+
+{{#each adminother}}
+<tr>
+                        <td>{{ petname }}</td>
+                        <td>{{ age }} years</td>
+                        <td>{{ category }}</td>
+                        <td>{{#if vaccinated}}Yes{{else}}No{{/if}}</td>
+                        <td>{{#if trained}}Yes{{else}}No{{/if}}</td>
+                        <td>{{ color }}</td>
+                        <td>{{ breed }}</td>
+                        <td>{{ location }} <br><br> latitude: {{latitude}} <br> longitude: {{longitude}}</td>
+                        <td>{{ description }}</td>
+                        <td> <img src="/backend/images/{{ imageName }}" alt="" width="100"></td>
+
+                        <td>
+                           {{!-- <a class="btn btn-primary" href="/edit-pet/{{ this._id }}">Edit</a>                      --}}
+                           <form style="display: inline;" action="/deletegar/{{ this._id }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this item?');">
+                        {{!-- <input type="hidden" name="_method" value="DELETE"> --}}
+                              <button style="cursor: pointer;" type="submit" class="btn btn-danger ml-2">Delete</button>
+                           </form>
+                        </td>
+   </tr>
+{{/each}}

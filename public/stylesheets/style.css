@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.pet-card-container {
+  padding: 10px; /* Adjust padding as needed */
+}
+
+.banner {
+  height: 80vh; /* Set the height to 60% of the viewport height */
+  background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(/images/c.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.banner img {
+  max-width: 100%; /* Ensure the image does not exceed its container's width */
+  height: auto; /* Allow the image to adjust its height proportionally */
+}
+
+
+.card-img-top {
+  border-radius: 20px;
+  padding: 2px;
+  object-fit: contain;
+}
+
+.list {
+  background-color: rgb(236, 226, 226);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}

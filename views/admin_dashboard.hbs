@@ -1,0 +1,96 @@
+
+<!doctype html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="/stylesheets/admin-style.css">
+      <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+      
+      <title>admin</title>
+   </head>
+   <body>
+    {{>navbarAdmin}}
+      <div class="container-fluid bg-side-nav" >
+         <div class="row">
+            <div class="col-lg-10">
+
+              <div class="dashboard-content-area">
+                <!-- put your contente -->
+<h1>Admin Dashboard</h1>
+               <div class="row">
+                <div class="col-lg-3 col-6" style="text-align: center;">
+                    <div class="small-box bg-danger"style="border-radius: 15px;">
+                      <div class="inner">
+                        <h3>{{countPet}}</h3>
+        
+                        <p>Pets</p>
+                      </div>
+                      <div class="icon">
+                        <i class="ion ion-pie-graph"></i>
+                      </div>
+                      <a href="/admin/pets" class="small-box-footer text-dark mt-2">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                  </div>
+                  <!-- ./col -->
+                  <div class="col-lg-3 col-6" style="text-align: center;">
+                    <!-- small box -->
+                    <div class="small-box bg-success" style="border-radius: 15px;">
+                      <div class="inner">
+                        <h3>{{countUser}}</h3>
+        
+                        <p>Users</p>
+                      </div>
+                      <div class="icon">
+                        <i class="ion ion-stats-bars"></i>
+                      </div>
+                      <a href="/admin/users/" class="text-dark">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                  </div>
+                  <!-- ./col -->
+                  <div class="col-lg-3 col-6" style="text-align: center;">
+                    <!-- small box -->
+                    <div class="small-box bg-warning" style="border-radius: 15px;">
+                      <div class="inner">
+                        <h3>{{countShelter}}</h3>
+        
+                        <p>Shelters</p>
+                      </div>
+                      <div class="icon">
+                        <i class="ion ion-person-add"></i>
+                      </div>
+                      <a href="/admin/shelters" class="text-dark">More info <i class="fas fa-arrow-circle-right text-light"></i></a>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-6" style="text-align: center;">
+                    <!-- small box -->
+                    <div class="small-box bg-info" style="border-radius: 15px;">
+                      <div class="inner">
+                        <h3>{{countUser}}</h3>
+        
+                        <p>Unique Visitors</p>
+                      </div>
+                      <div class="icon">
+                        <i class="ion ion-bag"></i>
+                      </div>
+                      <a href="#" class="small-box-footer text-dark">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                  </div>
+                  <!-- ./col -->
+                </div> 
+
+              <!-- end your content here -->
+             </div>
+
+            </div>
+         </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
+   </body>
+</html>

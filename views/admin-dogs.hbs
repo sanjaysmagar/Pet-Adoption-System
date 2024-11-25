@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Dogs</title>
+    <style>
+      .col-lg-10{
+         margin-left: 8%;
+      }
+        .dashboard-content-area{
+    padding: 25px;
+    background: #fff;
+  }
+  .dashboard-content-area h1{
+    font-size:23px;
+    padding-bottom:20px;
+
+  }
+    </style>
+</head>
+<body>
+    {{>navbarAdmin}}
+    <div class="col-lg-10">
+
+              <div class="dashboard-content-area">
+                <!-- put your contente -->
+
+               <h1>All Your Pet's Details</h1>
+               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0%">
+                  <thead>
+                     <tr>
+                        <th>Pet Name</th>
+                        <th>Pet Age</th>
+                        <th>Category</th>
+                        <th>Vacinated</th>
+                        <th>Trained</th>
+                        <th>Color</th>
+                        <th>Breed</th>
+                        <th>Location</th>
+                        <th>Description</th>
+                        <th>Photo</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     {{> tableRow }} 
+                  </tbody>
+               </table>
+                 
+
+                 {{!-- <center> <br> <a class="btn btn-success btn-md" href="/addpet">Add More Pets</a> </center> --}}
+       
+
+              <!-- end your content here -->
+             </div>
+
+            </div>
+    {{>footer}}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+    <script src="/javascripts/getLocation.js"></script>
+</body>
+</html>

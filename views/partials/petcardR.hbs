@@ -1,0 +1,33 @@
+<style>
+  .card-body {
+  display: flex;
+}
+
+.card-body form {
+  margin-right: 5px; /* Adjust margin as needed */
+}
+
+</style>
+
+      {{#each adoptionRequests}}
+      <div class="col" style="margin-top: 5vh;">
+        <div class="card"
+          style="width: 22rem; padding-top:10px ; border-radius:30px ; box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset; left: 35px;">
+          <img src="/backend/images/{{imageName}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{petname}}</h5>
+            <p class="card-text">Age: {{age}} years <br> Breed: {{breed}} <br>Location: {{location}} <br>Requested By: {{firstName}} {{lastName}} <br> Email: {{email}} <br> Phone Number: {{mobileNo}}</p>
+          </div>
+          <div class="card-body">
+            <form action="/accept-request/{{_id}}" method="post" onsubmit="return confirm('Are you sure? You cannot cancel once you confirm.')">
+              <button type="submit" class="btn btn bg-info">Accept</button>
+            </form>
+            <form action="/delete-request/{{_id}}" method="post" onsubmit="return confirm('Are you sure? You cannot cancel once you confirm.')">
+              <button type="submit" class="delete btn bg-danger">Delete</button>
+            </form>
+              
+          </div>
+          </div>
+        </div>
+      </div>
+      {{/each}}

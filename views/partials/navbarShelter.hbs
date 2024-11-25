@@ -1,0 +1,59 @@
+<style>
+
+  .navbar .navbar-nav .nav-item a{
+    padding: 15px;
+    
+    
+  }
+  .navbar .navbar-nav .nav-but {
+    padding: 10px;
+  }
+
+</style>
+
+<nav class="navbar navbar-expand-lg bg-info">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/shelter-dashboard">PetAdoption</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/dog-shelter">Dogs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/cat-shelter">Cats</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/others-shelter">Others</a>
+          </li>
+          {{!-- {{#if shelterloggedIn}} --}}
+          <li class="nav-item ">
+            <a class="nav-link active" aria-current="page" href="/requests-shelter">Requests</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link active" aria-current="page" href="/adopted-shelter">Adopted</a>
+          </li>
+          {{!-- {{/if}} --}}
+          <li class="nav-item">
+            <a class="nav-link active" href="/shelter-profile">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/aboutus-shelter">About Us</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-but">
+              <a class="btn btn btn-primary" href="/addpet">Add pets</a>
+          </li>
+          <li class="nav-but" >
+              <a class="btn btn btn-primary" href="/logout">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+

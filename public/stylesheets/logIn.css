@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.subin{
+    background-image:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(/images/lgn.jpg);
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}

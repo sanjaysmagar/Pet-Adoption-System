@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Details of dog</title>
+    <link rel="stylesheet" href="/stylesheets/pet-details.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+    {{>navbar}}
+    {{!-- {{#each peti}} --}}
+    <div class="container-fluid" style="background-color: rgb(225, 228, 228); height: 140vh; width: 100%;">
+      <div style="width: 80%; padding-top: 10px; padding-left: 200px;">
+          <div>
+              <img src="/backend/images/{{ peti.imageName }}" alt="" height="600px" width="80%" style="position: relative;">
+          </div>
+          <div class="card" style="width: 80%;">
+              <div class="card-header">
+                <b>Details</b>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Name: {{peti.petname}}</li>
+                <li class="list-group-item">Category: {{peti.category}}</li>
+                <li class="list-group-item">Age: {{peti.age}} years</li>
+                <li class="list-group-item">Breed: {{peti.breed}}</li>
+                <li class="list-group-item">Color: {{peti.color}}</li>
+                <li class="list-group-item">Vaccinated: {{#if peti.vaccinated}}Yes{{else}}No{{/if}}</li>
+                <li class="list-group-item">Trained:  {{#if peti.trained}}Yes{{else}}No{{/if}}</li>
+                <li class="list-group-item">Location: {{peti.location}}</li>
+              </ul>
+              <div class="card-body">
+                <form action="/adopt/{{peti._id}}" method="post" onsubmit="return confirm('Are you sure? You cannot cancel once you confirm.')">
+                {{#if requested}}
+                <button type="button" class="btn btn bg-info" disabled>Request Sent</button>
+                {{else}}
+                  <button type="submit" class="btn btn bg-info">Adopt</button>
+                  {{/if}}
+                </form>
+                </div>
+            </div>
+      </div>
+  </div>
+  {{!-- {{/each}} --}}
+{{>footer}}
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+  </body>
+</html>
